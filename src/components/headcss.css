@@ -1,0 +1,103 @@
+/* Основной стиль для шапки */
+body, html {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 90%; /* Немного уменьшили базовый размер шрифта */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Логотип слева, остальные элементы справа */
+  align-items: center;
+  background-color: white; /* Белый фон */
+  color: black;
+  padding: 1rem 2.5vw; /* Уменьшили отступы */
+  border-bottom: 0.05rem solid #dcdcdc; /* Тонкая серая линия */
+  position: relative;
+}
+
+.logo {
+  font-size: 1.8rem; /* Уменьшили размер шрифта для логотипа */
+  font-weight: bold;
+  color: #006837; /* Зеленый цвет для логотипа */
+  padding-left: 12.5vw; /* Еще больше отступ справа */
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0 1.5rem; /* Уменьшили отступы */
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem; /* Меньше размер шрифта */
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #006837; /* Зеленый при наведении */
+}
+
+/* Стиль кнопки с анимацией */
+.custom-button {
+  background-color: #006837;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 21rem; /* Чуть-чуть сдвинул влево */
+}
+
+.custom-button:hover {
+  background-color: #004f2d;
+  transform: scale(1.05);
+}
+
+.custom-button:active {
+  transform: scale(0.95);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 48rem) { /* Используем rem для медиазапросов */
+  .header {
+    padding: 1rem 2vw; /* Адаптивные отступы */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Отступ снизу */
+    font-size: 1.5rem; /* Уменьшили размер шрифта для мобильных */
+  }
+
+  .nav ul {
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav li {
+    margin: 1rem 0;
+  }
+
+  .nav a {
+    font-size: 0.8rem; /* Еще меньше шрифт для мобильных */
+  }
+  .custom-button {
+    margin-top: 2rem;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}

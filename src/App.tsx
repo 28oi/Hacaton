@@ -1,18 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/head';
+import Footer from './components/footer';
 
-
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <button className="btn btn-primary animated-btn">Пример кнопки с анимацией</button>
-
-
-
+      <Header />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
+
