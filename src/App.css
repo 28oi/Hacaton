@@ -1,0 +1,34 @@
+/* Центрируем кнопку на экране */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+/* Стиль кнопки */
+.animated-btn {
+  position: absolute;
+  padding: 15px 30px;
+  font-size: 16px;
+  transition: transform 0.3s ease-out, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Цвет кнопки при наведении */
+.animated-btn:hover {
+  background-color: #ff5733;
+}
+
+/* Стиль при нажатии на кнопку */
+.animated-btn:active {
+  transform: scale(0.9);
+}
